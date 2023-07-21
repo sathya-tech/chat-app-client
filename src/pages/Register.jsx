@@ -28,7 +28,7 @@ const Register = () => {
     try {
       const result = await axios.post("https://chat-application-mib4.onrender.com/register", data);
       await signInWithEmailAndPassword(auth, email, password).then(() => {
-        navigate('/', { replace: true });  
+        navigate('/login', { replace: true });  
       });
       
       console.log("success");
